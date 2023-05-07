@@ -1,0 +1,1309 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: rp_template_hal_v1\rp_template_hal_v1.axf
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_EXEC (Executable) (2)
+    Machine: EM_ARM (ARM)
+
+    Image Entry point: 0x08000189
+    Flags: EF_ARM_HASENTRY (0x05000002)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Conforms to Base float procedure-call standard
+
+    Built with
+    Component: ARM Compiler 5.06 update 6 (build 750) Tool: armasm [4d35ec]
+    Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 32 bytes (0x20)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 1
+    Section header entries: 16
+
+    Program header offset: 1563200 (0x0017da40)
+    Section header offset: 1563232 (0x0017da60)
+
+    Section header string table index: 15
+
+========================================================================
+
+** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
+    Size : 78480 bytes (57072 bytes in file)
+    Virtual address: 0x08000000 (Alignment 8)
+
+
+========================================================================
+
+** Section #1 'ER_IROM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
+    Size   : 56688 bytes (alignment 8)
+    Address: 0x08000000
+
+
+** Section #2 'RW_IRAM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 384 bytes (alignment 4)
+    Address: 0x20000000
+
+
+** Section #3 'RW_IRAM1' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 20060 bytes (alignment 8)
+    Address: 0x200006c4
+
+
+** Section #4 '.debug_abbrev' (SHT_PROGBITS)
+    Size   : 1476 bytes
+
+
+** Section #5 '.debug_frame' (SHT_PROGBITS)
+    Size   : 15316 bytes
+
+
+** Section #6 '.debug_info' (SHT_PROGBITS)
+    Size   : 264928 bytes
+
+
+** Section #7 '.debug_line' (SHT_PROGBITS)
+    Size   : 93200 bytes
+
+
+** Section #8 '.debug_loc' (SHT_PROGBITS)
+    Size   : 45672 bytes
+
+
+** Section #9 '.debug_macinfo' (SHT_PROGBITS)
+    Size   : 855032 bytes
+
+
+** Section #10 '.debug_pubnames' (SHT_PROGBITS)
+    Size   : 12691 bytes
+
+
+** Section #11 '.symtab' (SHT_SYMTAB)
+    Size   : 29808 bytes (alignment 4)
+    String table #12 '.strtab'
+    Last local symbol no. 1355
+
+
+** Section #12 '.strtab' (SHT_STRTAB)
+    Size   : 29800 bytes
+
+
+** Section #13 '.note' (SHT_NOTE)
+    Size   : 28 bytes (alignment 4)
+
+
+** Section #14 '.comment' (SHT_PROGBITS)
+    Size   : 157968 bytes
+
+
+** Section #15 '.shstrtab' (SHT_STRTAB)
+    Size   : 156 bytes
+
+
+address     size       variable name                            type
+0x200006ac  0x1        ucMaxSysCallPriority                     uint8_t
+
+address     size       variable name                            type
+0x200006b4  0x4        ulMaxPRIGROUPValue                       uint32_t
+
+address     size       variable name                            type
+0x200006b0  0x4        uxCriticalNesting                        UBaseType_t
+
+address     size       variable name                            type
+0x2000068c  0x4        pxEnd                                    pointer to BlockLink_t
+
+address     size       variable name                            type
+0x2000131c  0x3c00     ucHeap                                   array[15360] of uint8_t
+
+address     size       variable name                            type
+0x200006a0  0x4        xBlockAllocatedBit                       size_t
+
+address     size       variable name                            type
+0x20000690  0x4        xFreeBytesRemaining                      size_t
+
+address     size       variable name                            type
+0x20000694  0x4        xMinimumEverFreeBytesRemaining           size_t
+
+address     size       variable name                            type
+0x20000698  0x4        xNumberOfSuccessfulAllocations           size_t
+
+address     size       variable name                            type
+0x2000069c  0x4        xNumberOfSuccessfulFrees                 size_t
+
+address     size       variable name                            type
+0x200006a4  0x8        xStart                                   BlockLink_t
+0x200006a4  0x4        xStart.pxNextFreeBlock                   pointer to A_BLOCK_LINK
+0x200006a8  0x4        xStart.xBlockSize                        size_t
+
+address     size       variable name                            type
+0x20000650  0x4        pxCurrentTCB                             volatile pointer to TCB_t
+
+address     size       variable name                            type
+0x20000684  0x4        pxDelayedTaskList                        volatile pointer to List_t
+
+address     size       variable name                            type
+0x20000688  0x4        pxOverflowDelayedTaskList                volatile pointer to List_t
+
+address     size       variable name                            type
+0x2000122c  0x8c       pxReadyTasksLists                        array[7] of List_t
+
+address     size       variable name                            type
+0x20000658  0x4        uxCurrentNumberOfTasks                   volatile UBaseType_t
+
+address     size       variable name                            type
+0x20000654  0x4        uxDeletedTasksWaitingCleanUp             volatile UBaseType_t
+
+address     size       variable name                            type
+0x20000680  0x4        uxSchedulerSuspended                     volatile UBaseType_t
+
+address     size       variable name                            type
+0x20000674  0x4        uxTaskNumber                             UBaseType_t
+
+address     size       variable name                            type
+0x20000660  0x4        uxTopReadyPriority                       volatile UBaseType_t
+
+address     size       variable name                            type
+0x200012b8  0x14       xDelayedTaskList1                        List_t
+0x200012b8  0x4        xDelayedTaskList1.uxNumberOfItems        volatile UBaseType_t
+0x200012bc  0x4        xDelayedTaskList1.pxIndex                pointer to ListItem_t
+0x200012c0  0xc        xDelayedTaskList1.xListEnd               MiniListItem_t
+0x200012c0  0x4        xDelayedTaskList1.xListEnd.xItemValue    TickType_t
+0x200012c4  0x4        xDelayedTaskList1.xListEnd.pxNext        pointer to xLIST_ITEM
+0x200012c8  0x4        xDelayedTaskList1.xListEnd.pxPrevious    pointer to xLIST_ITEM
+
+address     size       variable name                            type
+0x200012cc  0x14       xDelayedTaskList2                        List_t
+0x200012cc  0x4        xDelayedTaskList2.uxNumberOfItems        volatile UBaseType_t
+0x200012d0  0x4        xDelayedTaskList2.pxIndex                pointer to ListItem_t
+0x200012d4  0xc        xDelayedTaskList2.xListEnd               MiniListItem_t
+0x200012d4  0x4        xDelayedTaskList2.xListEnd.xItemValue    TickType_t
+0x200012d8  0x4        xDelayedTaskList2.xListEnd.pxNext        pointer to xLIST_ITEM
+0x200012dc  0x4        xDelayedTaskList2.xListEnd.pxPrevious    pointer to xLIST_ITEM
+
+address     size       variable name                            type
+0x2000067c  0x4        xIdleTaskHandle                          TaskHandle_t
+
+address     size       variable name                            type
+0x20000678  0x4        xNextTaskUnblockTime                     volatile TickType_t
+
+address     size       variable name                            type
+0x20000670  0x4        xNumOfOverflows                          volatile BaseType_t
+
+address     size       variable name                            type
+0x20000668  0x4        xPendedTicks                             volatile TickType_t
+
+address     size       variable name                            type
+0x200012e0  0x14       xPendingReadyList                        List_t
+0x200012e0  0x4        xPendingReadyList.uxNumberOfItems        volatile UBaseType_t
+0x200012e4  0x4        xPendingReadyList.pxIndex                pointer to ListItem_t
+0x200012e8  0xc        xPendingReadyList.xListEnd               MiniListItem_t
+0x200012e8  0x4        xPendingReadyList.xListEnd.xItemValue    TickType_t
+0x200012ec  0x4        xPendingReadyList.xListEnd.pxNext        pointer to xLIST_ITEM
+0x200012f0  0x4        xPendingReadyList.xListEnd.pxPrevious    pointer to xLIST_ITEM
+
+address     size       variable name                            type
+0x20000664  0x4        xSchedulerRunning                        volatile BaseType_t
+
+address     size       variable name                            type
+0x20001308  0x14       xSuspendedTaskList                       List_t
+0x20001308  0x4        xSuspendedTaskList.uxNumberOfItems       volatile UBaseType_t
+0x2000130c  0x4        xSuspendedTaskList.pxIndex               pointer to ListItem_t
+0x20001310  0xc        xSuspendedTaskList.xListEnd              MiniListItem_t
+0x20001310  0x4        xSuspendedTaskList.xListEnd.xItemValue   TickType_t
+0x20001314  0x4        xSuspendedTaskList.xListEnd.pxNext       pointer to xLIST_ITEM
+0x20001318  0x4        xSuspendedTaskList.xListEnd.pxPrevious   pointer to xLIST_ITEM
+
+address     size       variable name                            type
+0x200012f4  0x14       xTasksWaitingTermination                 List_t
+0x200012f4  0x4        xTasksWaitingTermination.uxNumberOfItems volatile UBaseType_t
+0x200012f8  0x4        xTasksWaitingTermination.pxIndex         pointer to ListItem_t
+0x200012fc  0xc        xTasksWaitingTermination.xListEnd        MiniListItem_t
+0x200012fc  0x4        xTasksWaitingTermination.xListEnd.xItemValue TickType_t
+0x20001300  0x4        xTasksWaitingTermination.xListEnd.pxNext pointer to xLIST_ITEM
+0x20001304  0x4        xTasksWaitingTermination.xListEnd.pxPrevious pointer to xLIST_ITEM
+
+address     size       variable name                            type
+0x2000065c  0x4        xTickCount                               volatile TickType_t
+
+address     size       variable name                            type
+0x2000066c  0x4        xYieldPending                            volatile BaseType_t
+
+address     size       variable name                            type
+0x2000064c  0x4        uwTick                                   volatile uint32_t
+
+address     size       variable name                            type
+0x20000644  0x1        uwTickFreq                               HAL_TickFreqTypeDef
+
+address     size       variable name                            type
+0x20000648  0x4        uwTickPrio                               uint32_t
+
+address     size       variable name                            type
+0x2000120c  0x20       pFlash                                   FLASH_ProcessTypeDef
+0x2000120c  0x1      * pFlash.ProcedureOnGoing                  volatile FLASH_ProcedureTypeDef
+0x20001210  0x4        pFlash.NbSectorsToErase                  volatile uint32_t
+0x20001214  0x1      * pFlash.VoltageForErase                   volatile uint8_t
+0x20001218  0x4        pFlash.Sector                            volatile uint32_t
+0x2000121c  0x4        pFlash.Bank                              volatile uint32_t
+0x20001220  0x4        pFlash.Address                           volatile uint32_t
+0x20001224  0x1      * pFlash.Lock                              HAL_LockTypeDef
+0x20001228  0x4        pFlash.ErrorCode                         volatile uint32_t
+
+address     size       variable name                            type
+0x0800dbfc  0x10       AHBPrescTable                            array[16] of const uint8_t
+
+address     size       variable name                            type
+0x0800dc0c  0x8        APBPrescTable                            array[8] of const uint8_t
+
+address     size       variable name                            type
+0x20000640  0x4        SystemCoreClock                          uint32_t
+
+address     size       variable name                            type
+0x200011c4  0x48       htim2                                    TIM_HandleTypeDef
+0x200011c4  0x4        htim2.Instance                           pointer to TIM_TypeDef
+0x200011c8  0x18       htim2.Init                               TIM_Base_InitTypeDef
+0x200011c8  0x4        htim2.Init.Prescaler                     uint32_t
+0x200011cc  0x4        htim2.Init.CounterMode                   uint32_t
+0x200011d0  0x4        htim2.Init.Period                        uint32_t
+0x200011d4  0x4        htim2.Init.ClockDivision                 uint32_t
+0x200011d8  0x4        htim2.Init.RepetitionCounter             uint32_t
+0x200011dc  0x4        htim2.Init.AutoReloadPreload             uint32_t
+0x200011e0  0x1      * htim2.Channel                            HAL_TIM_ActiveChannel
+0x200011e4  0x1c       htim2.hdma                               array[7] of pointer to DMA_HandleTypeDef
+0x20001200  0x1        htim2.Lock                               HAL_LockTypeDef
+0x20001201  0x1        htim2.State                              volatile HAL_TIM_StateTypeDef
+0x20001202  0x4        htim2.ChannelState                       array[4] of volatile HAL_TIM_ChannelStateTypeDef
+0x20001206  0x4        htim2.ChannelNState                      array[4] of volatile HAL_TIM_ChannelStateTypeDef
+0x2000120a  0x1        htim2.DMABurstState                      volatile HAL_TIM_DMABurstStateTypeDef
+
+address     size       variable name                            type
+0x20000fe4  0x60       hdma_uart4_rx                            DMA_HandleTypeDef
+0x20000fe4  0x4        hdma_uart4_rx.Instance                   pointer to DMA_Stream_TypeDef
+0x20000fe8  0x30       hdma_uart4_rx.Init                       DMA_InitTypeDef
+0x20000fe8  0x4        hdma_uart4_rx.Init.Channel               uint32_t
+0x20000fec  0x4        hdma_uart4_rx.Init.Direction             uint32_t
+0x20000ff0  0x4        hdma_uart4_rx.Init.PeriphInc             uint32_t
+0x20000ff4  0x4        hdma_uart4_rx.Init.MemInc                uint32_t
+0x20000ff8  0x4        hdma_uart4_rx.Init.PeriphDataAlignment   uint32_t
+0x20000ffc  0x4        hdma_uart4_rx.Init.MemDataAlignment      uint32_t
+0x20001000  0x4        hdma_uart4_rx.Init.Mode                  uint32_t
+0x20001004  0x4        hdma_uart4_rx.Init.Priority              uint32_t
+0x20001008  0x4        hdma_uart4_rx.Init.FIFOMode              uint32_t
+0x2000100c  0x4        hdma_uart4_rx.Init.FIFOThreshold         uint32_t
+0x20001010  0x4        hdma_uart4_rx.Init.MemBurst              uint32_t
+0x20001014  0x4        hdma_uart4_rx.Init.PeriphBurst           uint32_t
+0x20001018  0x1        hdma_uart4_rx.Lock                       HAL_LockTypeDef
+0x20001019  0x1      * hdma_uart4_rx.State                      volatile HAL_DMA_StateTypeDef
+0x2000101c  0x4        hdma_uart4_rx.Parent                     pointer to unknown Type 
+0x20001020  0x4        hdma_uart4_rx.XferCpltCallback           pointer to function 
+0x20001024  0x4        hdma_uart4_rx.XferHalfCpltCallback       pointer to function 
+0x20001028  0x4        hdma_uart4_rx.XferM1CpltCallback         pointer to function 
+0x2000102c  0x4        hdma_uart4_rx.XferM1HalfCpltCallback     pointer to function 
+0x20001030  0x4        hdma_uart4_rx.XferErrorCallback          pointer to function 
+0x20001034  0x4        hdma_uart4_rx.XferAbortCallback          pointer to function 
+0x20001038  0x4        hdma_uart4_rx.ErrorCode                  volatile uint32_t
+0x2000103c  0x4        hdma_uart4_rx.StreamBaseAddress          uint32_t
+0x20001040  0x4        hdma_uart4_rx.StreamIndex                uint32_t
+
+address     size       variable name                            type
+0x20001044  0x60       hdma_uart5_rx                            DMA_HandleTypeDef
+0x20001044  0x4        hdma_uart5_rx.Instance                   pointer to DMA_Stream_TypeDef
+0x20001048  0x30       hdma_uart5_rx.Init                       DMA_InitTypeDef
+0x20001048  0x4        hdma_uart5_rx.Init.Channel               uint32_t
+0x2000104c  0x4        hdma_uart5_rx.Init.Direction             uint32_t
+0x20001050  0x4        hdma_uart5_rx.Init.PeriphInc             uint32_t
+0x20001054  0x4        hdma_uart5_rx.Init.MemInc                uint32_t
+0x20001058  0x4        hdma_uart5_rx.Init.PeriphDataAlignment   uint32_t
+0x2000105c  0x4        hdma_uart5_rx.Init.MemDataAlignment      uint32_t
+0x20001060  0x4        hdma_uart5_rx.Init.Mode                  uint32_t
+0x20001064  0x4        hdma_uart5_rx.Init.Priority              uint32_t
+0x20001068  0x4        hdma_uart5_rx.Init.FIFOMode              uint32_t
+0x2000106c  0x4        hdma_uart5_rx.Init.FIFOThreshold         uint32_t
+0x20001070  0x4        hdma_uart5_rx.Init.MemBurst              uint32_t
+0x20001074  0x4        hdma_uart5_rx.Init.PeriphBurst           uint32_t
+0x20001078  0x1        hdma_uart5_rx.Lock                       HAL_LockTypeDef
+0x20001079  0x1      * hdma_uart5_rx.State                      volatile HAL_DMA_StateTypeDef
+0x2000107c  0x4        hdma_uart5_rx.Parent                     pointer to unknown Type 
+0x20001080  0x4        hdma_uart5_rx.XferCpltCallback           pointer to function 
+0x20001084  0x4        hdma_uart5_rx.XferHalfCpltCallback       pointer to function 
+0x20001088  0x4        hdma_uart5_rx.XferM1CpltCallback         pointer to function 
+0x2000108c  0x4        hdma_uart5_rx.XferM1HalfCpltCallback     pointer to function 
+0x20001090  0x4        hdma_uart5_rx.XferErrorCallback          pointer to function 
+0x20001094  0x4        hdma_uart5_rx.XferAbortCallback          pointer to function 
+0x20001098  0x4        hdma_uart5_rx.ErrorCode                  volatile uint32_t
+0x2000109c  0x4        hdma_uart5_rx.StreamBaseAddress          uint32_t
+0x200010a0  0x4        hdma_uart5_rx.StreamIndex                uint32_t
+
+address     size       variable name                            type
+0x200010a4  0x60       hdma_usart1_rx                           DMA_HandleTypeDef
+0x200010a4  0x4        hdma_usart1_rx.Instance                  pointer to DMA_Stream_TypeDef
+0x200010a8  0x30       hdma_usart1_rx.Init                      DMA_InitTypeDef
+0x200010a8  0x4        hdma_usart1_rx.Init.Channel              uint32_t
+0x200010ac  0x4        hdma_usart1_rx.Init.Direction            uint32_t
+0x200010b0  0x4        hdma_usart1_rx.Init.PeriphInc            uint32_t
+0x200010b4  0x4        hdma_usart1_rx.Init.MemInc               uint32_t
+0x200010b8  0x4        hdma_usart1_rx.Init.PeriphDataAlignment  uint32_t
+0x200010bc  0x4        hdma_usart1_rx.Init.MemDataAlignment     uint32_t
+0x200010c0  0x4        hdma_usart1_rx.Init.Mode                 uint32_t
+0x200010c4  0x4        hdma_usart1_rx.Init.Priority             uint32_t
+0x200010c8  0x4        hdma_usart1_rx.Init.FIFOMode             uint32_t
+0x200010cc  0x4        hdma_usart1_rx.Init.FIFOThreshold        uint32_t
+0x200010d0  0x4        hdma_usart1_rx.Init.MemBurst             uint32_t
+0x200010d4  0x4        hdma_usart1_rx.Init.PeriphBurst          uint32_t
+0x200010d8  0x1        hdma_usart1_rx.Lock                      HAL_LockTypeDef
+0x200010d9  0x1      * hdma_usart1_rx.State                     volatile HAL_DMA_StateTypeDef
+0x200010dc  0x4        hdma_usart1_rx.Parent                    pointer to unknown Type 
+0x200010e0  0x4        hdma_usart1_rx.XferCpltCallback          pointer to function 
+0x200010e4  0x4        hdma_usart1_rx.XferHalfCpltCallback      pointer to function 
+0x200010e8  0x4        hdma_usart1_rx.XferM1CpltCallback        pointer to function 
+0x200010ec  0x4        hdma_usart1_rx.XferM1HalfCpltCallback    pointer to function 
+0x200010f0  0x4        hdma_usart1_rx.XferErrorCallback         pointer to function 
+0x200010f4  0x4        hdma_usart1_rx.XferAbortCallback         pointer to function 
+0x200010f8  0x4        hdma_usart1_rx.ErrorCode                 volatile uint32_t
+0x200010fc  0x4        hdma_usart1_rx.StreamBaseAddress         uint32_t
+0x20001100  0x4        hdma_usart1_rx.StreamIndex               uint32_t
+
+address     size       variable name                            type
+0x20001104  0x60       hdma_usart1_tx                           DMA_HandleTypeDef
+0x20001104  0x4        hdma_usart1_tx.Instance                  pointer to DMA_Stream_TypeDef
+0x20001108  0x30       hdma_usart1_tx.Init                      DMA_InitTypeDef
+0x20001108  0x4        hdma_usart1_tx.Init.Channel              uint32_t
+0x2000110c  0x4        hdma_usart1_tx.Init.Direction            uint32_t
+0x20001110  0x4        hdma_usart1_tx.Init.PeriphInc            uint32_t
+0x20001114  0x4        hdma_usart1_tx.Init.MemInc               uint32_t
+0x20001118  0x4        hdma_usart1_tx.Init.PeriphDataAlignment  uint32_t
+0x2000111c  0x4        hdma_usart1_tx.Init.MemDataAlignment     uint32_t
+0x20001120  0x4        hdma_usart1_tx.Init.Mode                 uint32_t
+0x20001124  0x4        hdma_usart1_tx.Init.Priority             uint32_t
+0x20001128  0x4        hdma_usart1_tx.Init.FIFOMode             uint32_t
+0x2000112c  0x4        hdma_usart1_tx.Init.FIFOThreshold        uint32_t
+0x20001130  0x4        hdma_usart1_tx.Init.MemBurst             uint32_t
+0x20001134  0x4        hdma_usart1_tx.Init.PeriphBurst          uint32_t
+0x20001138  0x1        hdma_usart1_tx.Lock                      HAL_LockTypeDef
+0x20001139  0x1      * hdma_usart1_tx.State                     volatile HAL_DMA_StateTypeDef
+0x2000113c  0x4        hdma_usart1_tx.Parent                    pointer to unknown Type 
+0x20001140  0x4        hdma_usart1_tx.XferCpltCallback          pointer to function 
+0x20001144  0x4        hdma_usart1_tx.XferHalfCpltCallback      pointer to function 
+0x20001148  0x4        hdma_usart1_tx.XferM1CpltCallback        pointer to function 
+0x2000114c  0x4        hdma_usart1_tx.XferM1HalfCpltCallback    pointer to function 
+0x20001150  0x4        hdma_usart1_tx.XferErrorCallback         pointer to function 
+0x20001154  0x4        hdma_usart1_tx.XferAbortCallback         pointer to function 
+0x20001158  0x4        hdma_usart1_tx.ErrorCode                 volatile uint32_t
+0x2000115c  0x4        hdma_usart1_tx.StreamBaseAddress         uint32_t
+0x20001160  0x4        hdma_usart1_tx.StreamIndex               uint32_t
+
+address     size       variable name                            type
+0x20001164  0x60       hdma_usart2_rx                           DMA_HandleTypeDef
+0x20001164  0x4        hdma_usart2_rx.Instance                  pointer to DMA_Stream_TypeDef
+0x20001168  0x30       hdma_usart2_rx.Init                      DMA_InitTypeDef
+0x20001168  0x4        hdma_usart2_rx.Init.Channel              uint32_t
+0x2000116c  0x4        hdma_usart2_rx.Init.Direction            uint32_t
+0x20001170  0x4        hdma_usart2_rx.Init.PeriphInc            uint32_t
+0x20001174  0x4        hdma_usart2_rx.Init.MemInc               uint32_t
+0x20001178  0x4        hdma_usart2_rx.Init.PeriphDataAlignment  uint32_t
+0x2000117c  0x4        hdma_usart2_rx.Init.MemDataAlignment     uint32_t
+0x20001180  0x4        hdma_usart2_rx.Init.Mode                 uint32_t
+0x20001184  0x4        hdma_usart2_rx.Init.Priority             uint32_t
+0x20001188  0x4        hdma_usart2_rx.Init.FIFOMode             uint32_t
+0x2000118c  0x4        hdma_usart2_rx.Init.FIFOThreshold        uint32_t
+0x20001190  0x4        hdma_usart2_rx.Init.MemBurst             uint32_t
+0x20001194  0x4        hdma_usart2_rx.Init.PeriphBurst          uint32_t
+0x20001198  0x1        hdma_usart2_rx.Lock                      HAL_LockTypeDef
+0x20001199  0x1      * hdma_usart2_rx.State                     volatile HAL_DMA_StateTypeDef
+0x2000119c  0x4        hdma_usart2_rx.Parent                    pointer to unknown Type 
+0x200011a0  0x4        hdma_usart2_rx.XferCpltCallback          pointer to function 
+0x200011a4  0x4        hdma_usart2_rx.XferHalfCpltCallback      pointer to function 
+0x200011a8  0x4        hdma_usart2_rx.XferM1CpltCallback        pointer to function 
+0x200011ac  0x4        hdma_usart2_rx.XferM1HalfCpltCallback    pointer to function 
+0x200011b0  0x4        hdma_usart2_rx.XferErrorCallback         pointer to function 
+0x200011b4  0x4        hdma_usart2_rx.XferAbortCallback         pointer to function 
+0x200011b8  0x4        hdma_usart2_rx.ErrorCode                 volatile uint32_t
+0x200011bc  0x4        hdma_usart2_rx.StreamBaseAddress         uint32_t
+0x200011c0  0x4        hdma_usart2_rx.StreamIndex               uint32_t
+
+address     size       variable name                            type
+0x20000f5c  0x44       huart1                                   UART_HandleTypeDef
+0x20000f5c  0x4        huart1.Instance                          pointer to USART_TypeDef
+0x20000f60  0x1c       huart1.Init                              UART_InitTypeDef
+0x20000f60  0x4        huart1.Init.BaudRate                     uint32_t
+0x20000f64  0x4        huart1.Init.WordLength                   uint32_t
+0x20000f68  0x4        huart1.Init.StopBits                     uint32_t
+0x20000f6c  0x4        huart1.Init.Parity                       uint32_t
+0x20000f70  0x4        huart1.Init.Mode                         uint32_t
+0x20000f74  0x4        huart1.Init.HwFlowCtl                    uint32_t
+0x20000f78  0x4        huart1.Init.OverSampling                 uint32_t
+0x20000f7c  0x4        huart1.pTxBuffPtr                        pointer to uint8_t
+0x20000f80  0x2        huart1.TxXferSize                        uint16_t
+0x20000f82  0x2        huart1.TxXferCount                       volatile uint16_t
+0x20000f84  0x4        huart1.pRxBuffPtr                        pointer to uint8_t
+0x20000f88  0x2        huart1.RxXferSize                        uint16_t
+0x20000f8a  0x2        huart1.RxXferCount                       volatile uint16_t
+0x20000f8c  0x4        huart1.ReceptionType                     volatile HAL_UART_RxTypeTypeDef
+0x20000f90  0x4        huart1.hdmatx                            pointer to DMA_HandleTypeDef
+0x20000f94  0x4        huart1.hdmarx                            pointer to DMA_HandleTypeDef
+0x20000f98  0x1        huart1.Lock                              HAL_LockTypeDef
+0x20000f99  0x1        huart1.gState                            volatile HAL_UART_StateTypeDef
+0x20000f9a  0x1      * huart1.RxState                           volatile HAL_UART_StateTypeDef
+0x20000f9c  0x4        huart1.ErrorCode                         volatile uint32_t
+
+address     size       variable name                            type
+0x20000fa0  0x44       huart2                                   UART_HandleTypeDef
+0x20000fa0  0x4        huart2.Instance                          pointer to USART_TypeDef
+0x20000fa4  0x1c       huart2.Init                              UART_InitTypeDef
+0x20000fa4  0x4        huart2.Init.BaudRate                     uint32_t
+0x20000fa8  0x4        huart2.Init.WordLength                   uint32_t
+0x20000fac  0x4        huart2.Init.StopBits                     uint32_t
+0x20000fb0  0x4        huart2.Init.Parity                       uint32_t
+0x20000fb4  0x4        huart2.Init.Mode                         uint32_t
+0x20000fb8  0x4        huart2.Init.HwFlowCtl                    uint32_t
+0x20000fbc  0x4        huart2.Init.OverSampling                 uint32_t
+0x20000fc0  0x4        huart2.pTxBuffPtr                        pointer to uint8_t
+0x20000fc4  0x2        huart2.TxXferSize                        uint16_t
+0x20000fc6  0x2        huart2.TxXferCount                       volatile uint16_t
+0x20000fc8  0x4        huart2.pRxBuffPtr                        pointer to uint8_t
+0x20000fcc  0x2        huart2.RxXferSize                        uint16_t
+0x20000fce  0x2        huart2.RxXferCount                       volatile uint16_t
+0x20000fd0  0x4        huart2.ReceptionType                     volatile HAL_UART_RxTypeTypeDef
+0x20000fd4  0x4        huart2.hdmatx                            pointer to DMA_HandleTypeDef
+0x20000fd8  0x4        huart2.hdmarx                            pointer to DMA_HandleTypeDef
+0x20000fdc  0x1        huart2.Lock                              HAL_LockTypeDef
+0x20000fdd  0x1        huart2.gState                            volatile HAL_UART_StateTypeDef
+0x20000fde  0x1      * huart2.RxState                           volatile HAL_UART_StateTypeDef
+0x20000fe0  0x4        huart2.ErrorCode                         volatile uint32_t
+
+address     size       variable name                            type
+0x20000ed4  0x44       huart4                                   UART_HandleTypeDef
+0x20000ed4  0x4        huart4.Instance                          pointer to USART_TypeDef
+0x20000ed8  0x1c       huart4.Init                              UART_InitTypeDef
+0x20000ed8  0x4        huart4.Init.BaudRate                     uint32_t
+0x20000edc  0x4        huart4.Init.WordLength                   uint32_t
+0x20000ee0  0x4        huart4.Init.StopBits                     uint32_t
+0x20000ee4  0x4        huart4.Init.Parity                       uint32_t
+0x20000ee8  0x4        huart4.Init.Mode                         uint32_t
+0x20000eec  0x4        huart4.Init.HwFlowCtl                    uint32_t
+0x20000ef0  0x4        huart4.Init.OverSampling                 uint32_t
+0x20000ef4  0x4        huart4.pTxBuffPtr                        pointer to uint8_t
+0x20000ef8  0x2        huart4.TxXferSize                        uint16_t
+0x20000efa  0x2        huart4.TxXferCount                       volatile uint16_t
+0x20000efc  0x4        huart4.pRxBuffPtr                        pointer to uint8_t
+0x20000f00  0x2        huart4.RxXferSize                        uint16_t
+0x20000f02  0x2        huart4.RxXferCount                       volatile uint16_t
+0x20000f04  0x4        huart4.ReceptionType                     volatile HAL_UART_RxTypeTypeDef
+0x20000f08  0x4        huart4.hdmatx                            pointer to DMA_HandleTypeDef
+0x20000f0c  0x4        huart4.hdmarx                            pointer to DMA_HandleTypeDef
+0x20000f10  0x1        huart4.Lock                              HAL_LockTypeDef
+0x20000f11  0x1        huart4.gState                            volatile HAL_UART_StateTypeDef
+0x20000f12  0x1      * huart4.RxState                           volatile HAL_UART_StateTypeDef
+0x20000f14  0x4        huart4.ErrorCode                         volatile uint32_t
+
+address     size       variable name                            type
+0x20000f18  0x44       huart5                                   UART_HandleTypeDef
+0x20000f18  0x4        huart5.Instance                          pointer to USART_TypeDef
+0x20000f1c  0x1c       huart5.Init                              UART_InitTypeDef
+0x20000f1c  0x4        huart5.Init.BaudRate                     uint32_t
+0x20000f20  0x4        huart5.Init.WordLength                   uint32_t
+0x20000f24  0x4        huart5.Init.StopBits                     uint32_t
+0x20000f28  0x4        huart5.Init.Parity                       uint32_t
+0x20000f2c  0x4        huart5.Init.Mode                         uint32_t
+0x20000f30  0x4        huart5.Init.HwFlowCtl                    uint32_t
+0x20000f34  0x4        huart5.Init.OverSampling                 uint32_t
+0x20000f38  0x4        huart5.pTxBuffPtr                        pointer to uint8_t
+0x20000f3c  0x2        huart5.TxXferSize                        uint16_t
+0x20000f3e  0x2        huart5.TxXferCount                       volatile uint16_t
+0x20000f40  0x4        huart5.pRxBuffPtr                        pointer to uint8_t
+0x20000f44  0x2        huart5.RxXferSize                        uint16_t
+0x20000f46  0x2        huart5.RxXferCount                       volatile uint16_t
+0x20000f48  0x4        huart5.ReceptionType                     volatile HAL_UART_RxTypeTypeDef
+0x20000f4c  0x4        huart5.hdmatx                            pointer to DMA_HandleTypeDef
+0x20000f50  0x4        huart5.hdmarx                            pointer to DMA_HandleTypeDef
+0x20000f54  0x1        huart5.Lock                              HAL_LockTypeDef
+0x20000f55  0x1        huart5.gState                            volatile HAL_UART_StateTypeDef
+0x20000f56  0x1      * huart5.RxState                           volatile HAL_UART_StateTypeDef
+0x20000f58  0x4        huart5.ErrorCode                         volatile uint32_t
+
+address     size       variable name                            type
+0x20000e44  0x48       htim1                                    TIM_HandleTypeDef
+0x20000e44  0x4        htim1.Instance                           pointer to TIM_TypeDef
+0x20000e48  0x18       htim1.Init                               TIM_Base_InitTypeDef
+0x20000e48  0x4        htim1.Init.Prescaler                     uint32_t
+0x20000e4c  0x4        htim1.Init.CounterMode                   uint32_t
+0x20000e50  0x4        htim1.Init.Period                        uint32_t
+0x20000e54  0x4        htim1.Init.ClockDivision                 uint32_t
+0x20000e58  0x4        htim1.Init.RepetitionCounter             uint32_t
+0x20000e5c  0x4        htim1.Init.AutoReloadPreload             uint32_t
+0x20000e60  0x1      * htim1.Channel                            HAL_TIM_ActiveChannel
+0x20000e64  0x1c       htim1.hdma                               array[7] of pointer to DMA_HandleTypeDef
+0x20000e80  0x1        htim1.Lock                               HAL_LockTypeDef
+0x20000e81  0x1        htim1.State                              volatile HAL_TIM_StateTypeDef
+0x20000e82  0x4        htim1.ChannelState                       array[4] of volatile HAL_TIM_ChannelStateTypeDef
+0x20000e86  0x4        htim1.ChannelNState                      array[4] of volatile HAL_TIM_ChannelStateTypeDef
+0x20000e8a  0x1        htim1.DMABurstState                      volatile HAL_TIM_DMABurstStateTypeDef
+
+address     size       variable name                            type
+0x20000e8c  0x48       htim3                                    TIM_HandleTypeDef
+0x20000e8c  0x4        htim3.Instance                           pointer to TIM_TypeDef
+0x20000e90  0x18       htim3.Init                               TIM_Base_InitTypeDef
+0x20000e90  0x4        htim3.Init.Prescaler                     uint32_t
+0x20000e94  0x4        htim3.Init.CounterMode                   uint32_t
+0x20000e98  0x4        htim3.Init.Period                        uint32_t
+0x20000e9c  0x4        htim3.Init.ClockDivision                 uint32_t
+0x20000ea0  0x4        htim3.Init.RepetitionCounter             uint32_t
+0x20000ea4  0x4        htim3.Init.AutoReloadPreload             uint32_t
+0x20000ea8  0x1      * htim3.Channel                            HAL_TIM_ActiveChannel
+0x20000eac  0x1c       htim3.hdma                               array[7] of pointer to DMA_HandleTypeDef
+0x20000ec8  0x1        htim3.Lock                               HAL_LockTypeDef
+0x20000ec9  0x1        htim3.State                              volatile HAL_TIM_StateTypeDef
+0x20000eca  0x4        htim3.ChannelState                       array[4] of volatile HAL_TIM_ChannelStateTypeDef
+0x20000ece  0x4        htim3.ChannelNState                      array[4] of volatile HAL_TIM_ChannelStateTypeDef
+0x20000ed2  0x1        htim3.DMABurstState                      volatile HAL_TIM_DMABurstStateTypeDef
+
+address     size       variable name                            type
+0x20000e30  0x14       hdac                                     DAC_HandleTypeDef
+0x20000e30  0x4        hdac.Instance                            pointer to DAC_TypeDef
+0x20000e34  0x1        hdac.State                               volatile HAL_DAC_StateTypeDef
+0x20000e35  0x1      * hdac.Lock                                HAL_LockTypeDef
+0x20000e38  0x4        hdac.DMA_Handle1                         pointer to DMA_HandleTypeDef
+0x20000e3c  0x4        hdac.DMA_Handle2                         pointer to DMA_HandleTypeDef
+0x20000e40  0x4        hdac.ErrorCode                           volatile uint32_t
+
+address     size       variable name                            type
+0x2000063c  0x4        HAL_RCC_CAN1_CLK_ENABLED                 uint32_t
+
+address     size       variable name                            type
+0x20000de0  0x28       hcan1                                    CAN_HandleTypeDef
+0x20000de0  0x4        hcan1.Instance                           pointer to CAN_TypeDef
+0x20000de4  0x1c       hcan1.Init                               CAN_InitTypeDef
+0x20000de4  0x4        hcan1.Init.Prescaler                     uint32_t
+0x20000de8  0x4        hcan1.Init.Mode                          uint32_t
+0x20000dec  0x4        hcan1.Init.SyncJumpWidth                 uint32_t
+0x20000df0  0x4        hcan1.Init.TimeSeg1                      uint32_t
+0x20000df4  0x4        hcan1.Init.TimeSeg2                      uint32_t
+0x20000df8  0x1        hcan1.Init.TimeTriggeredMode             FunctionalState
+0x20000df9  0x1        hcan1.Init.AutoBusOff                    FunctionalState
+0x20000dfa  0x1        hcan1.Init.AutoWakeUp                    FunctionalState
+0x20000dfb  0x1        hcan1.Init.AutoRetransmission            FunctionalState
+0x20000dfc  0x1        hcan1.Init.ReceiveFifoLocked             FunctionalState
+0x20000dfd  0x1      * hcan1.Init.TransmitFifoPriority          FunctionalState
+0x20000e00  0x1      * hcan1.State                              volatile HAL_CAN_StateTypeDef
+0x20000e04  0x4        hcan1.ErrorCode                          volatile uint32_t
+
+address     size       variable name                            type
+0x20000e08  0x28       hcan2                                    CAN_HandleTypeDef
+0x20000e08  0x4        hcan2.Instance                           pointer to CAN_TypeDef
+0x20000e0c  0x1c       hcan2.Init                               CAN_InitTypeDef
+0x20000e0c  0x4        hcan2.Init.Prescaler                     uint32_t
+0x20000e10  0x4        hcan2.Init.Mode                          uint32_t
+0x20000e14  0x4        hcan2.Init.SyncJumpWidth                 uint32_t
+0x20000e18  0x4        hcan2.Init.TimeSeg1                      uint32_t
+0x20000e1c  0x4        hcan2.Init.TimeSeg2                      uint32_t
+0x20000e20  0x1        hcan2.Init.TimeTriggeredMode             FunctionalState
+0x20000e21  0x1        hcan2.Init.AutoBusOff                    FunctionalState
+0x20000e22  0x1        hcan2.Init.AutoWakeUp                    FunctionalState
+0x20000e23  0x1        hcan2.Init.AutoRetransmission            FunctionalState
+0x20000e24  0x1        hcan2.Init.ReceiveFifoLocked             FunctionalState
+0x20000e25  0x1      * hcan2.Init.TransmitFifoPriority          FunctionalState
+0x20000e28  0x1      * hcan2.State                              volatile HAL_CAN_StateTypeDef
+0x20000e2c  0x4        hcan2.ErrorCode                          volatile uint32_t
+
+address     size       variable name                            type
+0x20000d98  0x48       hadc1                                    ADC_HandleTypeDef
+0x20000d98  0x4        hadc1.Instance                           pointer to ADC_TypeDef
+0x20000d9c  0x30       hadc1.Init                               ADC_InitTypeDef
+0x20000d9c  0x4        hadc1.Init.ClockPrescaler                uint32_t
+0x20000da0  0x4        hadc1.Init.Resolution                    uint32_t
+0x20000da4  0x4        hadc1.Init.DataAlign                     uint32_t
+0x20000da8  0x4        hadc1.Init.ScanConvMode                  uint32_t
+0x20000dac  0x4        hadc1.Init.EOCSelection                  uint32_t
+0x20000db0  0x1      * hadc1.Init.ContinuousConvMode            FunctionalState
+0x20000db4  0x4        hadc1.Init.NbrOfConversion               uint32_t
+0x20000db8  0x1      * hadc1.Init.DiscontinuousConvMode         FunctionalState
+0x20000dbc  0x4        hadc1.Init.NbrOfDiscConversion           uint32_t
+0x20000dc0  0x4        hadc1.Init.ExternalTrigConv              uint32_t
+0x20000dc4  0x4        hadc1.Init.ExternalTrigConvEdge          uint32_t
+0x20000dc8  0x1      * hadc1.Init.DMAContinuousRequests         FunctionalState
+0x20000dcc  0x4        hadc1.NbrOfCurrentConversionRank         volatile uint32_t
+0x20000dd0  0x4        hadc1.DMA_Handle                         pointer to DMA_HandleTypeDef
+0x20000dd4  0x1      * hadc1.Lock                               HAL_LockTypeDef
+0x20000dd8  0x4        hadc1.State                              volatile uint32_t
+0x20000ddc  0x4        hadc1.ErrorCode                          volatile uint32_t
+
+address     size       variable name                            type
+0x20000630  0x4        ControlTaskHandle                        osThreadId
+
+address     size       variable name                            type
+0x2000062c  0x4        MonitorTaskHandle                        osThreadId
+
+address     size       variable name                            type
+0x20000638  0x4        SendTaskHandle                           osThreadId
+
+address     size       variable name                            type
+0x20000634  0x4        SystemTaskHandle                         osThreadId
+
+address     size       variable name                            type
+0x20000628  0x4        rpMonitorTaskHandle                      osThreadId
+
+address     size       variable name                            type
+0x20000b98  0x200      xIdleStack                               array[128] of StackType_t
+
+address     size       variable name                            type
+0x20000b44  0x54       xIdleTaskTCBBuffer                       StaticTask_t
+0x20000b44  0x4        xIdleTaskTCBBuffer.pxDummy1              pointer to unknown Type 
+0x20000b48  0x28       xIdleTaskTCBBuffer.xDummy3               array[2] of StaticListItem_t
+0x20000b70  0x4        xIdleTaskTCBBuffer.uxDummy5              UBaseType_t
+0x20000b74  0x4        xIdleTaskTCBBuffer.pxDummy6              pointer to unknown Type 
+0x20000b78  0x10       xIdleTaskTCBBuffer.ucDummy7              array[16] of uint8_t
+0x20000b88  0x8        xIdleTaskTCBBuffer.uxDummy12             array[2] of UBaseType_t
+0x20000b90  0x4        xIdleTaskTCBBuffer.ulDummy18             uint32_t
+0x20000b94  0x1        xIdleTaskTCBBuffer.ucDummy19             uint8_t
+0x20000b95  0x1        xIdleTaskTCBBuffer.uxDummy20             uint8_t
+
+address     size       variable name                            type
+0x20000622  0x2        accx                                     short
+
+address     size       variable name                            type
+0x20000624  0x2        accy                                     short
+
+address     size       variable name                            type
+0x20000626  0x2        accz                                     short
+
+address     size       variable name                            type
+0x2000061c  0x2        gyrox                                    short
+
+address     size       variable name                            type
+0x2000061e  0x2        gyroy                                    short
+
+address     size       variable name                            type
+0x20000620  0x2        gyroz                                    short
+
+address     size       variable name                            type
+0x20000574  0xa8       rpMonitor                                rpMonitor_t
+0x20000574  0x1        rpMonitor.self_id                        rpm_id
+0x20000575  0x1      * rpMonitor.target_id                      rpm_id
+0x20000578  0x44       rpMonitor.var_list                       rpm_list_t
+0x20000578  0x40       rpMonitor.var_list.var                   array[8] of rpm_var_t
+0x200005b8  0x1      * rpMonitor.var_list.cur_num               uint8_t
+0x200005bc  0x2c       rpMonitor.rx_frame                       rpm_frame_t
+0x200005bc  0x1        rpMonitor.rx_frame.sof                   uint8_t
+0x200005bd  0x1        rpMonitor.rx_frame.cmd_id                uint8_t
+0x200005be  0x1        rpMonitor.rx_frame.data_len              uint8_t
+0x200005bf  0x28       rpMonitor.rx_frame.data_seg              array[40] of uint8_t
+0x200005e7  0x1        rpMonitor.rx_frame.check_sum             uint8_t
+0x200005e8  0x2c       rpMonitor.tx_frame                       rpm_frame_t
+0x200005e8  0x1        rpMonitor.tx_frame.sof                   uint8_t
+0x200005e9  0x1        rpMonitor.tx_frame.cmd_id                uint8_t
+0x200005ea  0x1        rpMonitor.tx_frame.data_len              uint8_t
+0x200005eb  0x28       rpMonitor.tx_frame.data_seg              array[40] of uint8_t
+0x20000613  0x1        rpMonitor.tx_frame.check_sum             uint8_t
+0x20000614  0x2        rpMonitor.tx_period                      uint16_t
+0x20000616  0x1      * rpMonitor.rx_update                      volatile uint8_t
+0x20000618  0x2        rpMonitor.offline_cnt                    uint16_t
+0x2000061a  0x2        rpMonitor.offline_cnt_max                uint16_t
+
+address     size       variable name                            type
+0x20000558  0x1c       rpm_drv                                  drv_uart_t
+0x20000558  0x1        rpm_drv.type                             drv_type_t
+0x20000559  0x1        rpm_drv.id                               uart_id_t
+0x2000055a  0x1      * rpm_drv.errno                            drv_errno_t
+0x2000055c  0x4        rpm_drv.err_cnt                          uint32_t
+0x20000560  0x4        rpm_drv.tx_buf                           pointer to uint8_t
+0x20000564  0x1        rpm_drv.tx_buf_len                       uint8_t
+0x20000565  0x1      * rpm_drv.tx_data_cnt                      uint8_t
+0x20000568  0x4        rpm_drv.add_msg                          pointer to function 
+0x2000056c  0x4        rpm_drv.start_tx                         pointer to function 
+0x20000570  0x4        rpm_drv.start_tx_dma                     pointer to function 
+
+address     size       variable name                            type
+0x20000550  0x4        rpm_rx_frame                             pointer to rpm_frame_t
+
+address     size       variable name                            type
+0x20000af0  0x54       rpm_tx_buf                               array[84] of uint8_t
+
+address     size       variable name                            type
+0x2000054c  0x4        rpm_tx_frame                             pointer to rpm_frame_t
+
+address     size       variable name                            type
+0x20000554  0x4        rpm_var_list                             pointer to rpm_list_t
+
+address     size       variable name                            type
+0x20000548  0x4        SendFlag                                 uint32_t
+
+address     size       variable name                            type
+0x20000544  0x4        event                                    uint32_t
+
+address     size       variable name                            type
+0x20000540  0x4        send_control_time                        uint32_t
+
+address     size       variable name                            type
+0x20000535  0x2        flag                                     flag_t
+0x20000535  0x2        flag.gimbal                              anonymous
+0x20000535  0x1        flag.gimbal.reset_start                  uint8_t
+0x20000536  0x1        flag.gimbal.reset_ok                     uint8_t
+
+address     size       variable name                            type
+0x20000537  0x3        sys                                      system_t
+0x20000537  0x1        sys.remote_mode                          remote_mode_t
+0x20000538  0x1        sys.state                                sys_state_t
+0x20000539  0x1        sys.mode                                 sys_mode_t
+
+address     size       variable name                            type
+0x200004f8  0x3c       rc                                       rc_t
+0x200004f8  0x4        rc.dev                                   pointer to rc_sensor_t
+0x200004fc  0x4        rc.info                                  pointer to rc_info_t
+0x20000500  0x4        rc.init                                  pointer to function 
+0x20000504  0x4        rc.update                                pointer to function 
+0x20000508  0x4        rc.reset                                 pointer to function 
+0x2000050c  0x4        rc.update_button                         pointer to function 
+0x20000510  0x4        rc.update_switch                         pointer to function 
+0x20000514  0x4        rc.update_stick                          pointer to function 
+0x20000518  0x4        rc.update_mouse                          pointer to function 
+0x2000051c  0x4        rc.copy_button                           pointer to function 
+0x20000520  0x4        rc.copy_switch                           pointer to function 
+0x20000524  0x4        rc.reset_button                          pointer to function 
+0x20000528  0x4        rc.reset_switch                          pointer to function 
+0x2000052c  0x4        rc.reset_stick                           pointer to function 
+0x20000530  0x4        rc.reset_mouse                           pointer to function 
+
+address     size       variable name                            type
+0x20000968  0x104      rc_info                                  rc_info_t
+0x20000968  0xc        rc_info.SW1                              switch_t
+0x20000968  0x1        rc_info.SW1.state                        switch_state_t
+0x20000969  0x1      * rc_info.SW1.flip                         switch_flip_t
+0x2000096c  0x4        rc_info.SW1.update_time                  uint32_t
+0x20000970  0x4        rc_info.SW1.hold_time                    uint32_t
+0x20000974  0xc        rc_info.SW2                              switch_t
+0x20000974  0x1        rc_info.SW2.state                        switch_state_t
+0x20000975  0x1      * rc_info.SW2.flip                         switch_flip_t
+0x20000978  0x4        rc_info.SW2.update_time                  uint32_t
+0x2000097c  0x4        rc_info.SW2.hold_time                    uint32_t
+0x20000980  0x2        rc_info.CH0                              stick_t
+0x20000980  0x2        rc_info.CH0.val                          int16_t
+0x20000982  0x2        rc_info.CH1                              stick_t
+0x20000982  0x2        rc_info.CH1.val                          int16_t
+0x20000984  0x2        rc_info.CH2                              stick_t
+0x20000984  0x2        rc_info.CH2.val                          int16_t
+0x20000986  0x2        rc_info.CH3                              stick_t
+0x20000986  0x2        rc_info.CH3.val                          int16_t
+0x20000988  0x2        rc_info.THUMBWHEEL                       stick_t
+0x20000988  0x2      * rc_info.THUMBWHEEL.val                   int16_t
+0x2000098c  0xc        rc_info.W                                button_t
+0x2000098c  0x1        rc_info.W.state                          button_state_t
+0x2000098d  0x1      * rc_info.W.flip                           button_flip_t
+0x20000990  0x4        rc_info.W.update_time                    uint32_t
+0x20000994  0x4        rc_info.W.hold_time                      uint32_t
+0x20000998  0xc        rc_info.S                                button_t
+0x20000998  0x1        rc_info.S.state                          button_state_t
+0x20000999  0x1      * rc_info.S.flip                           button_flip_t
+0x2000099c  0x4        rc_info.S.update_time                    uint32_t
+0x200009a0  0x4        rc_info.S.hold_time                      uint32_t
+0x200009a4  0xc        rc_info.A                                button_t
+0x200009a4  0x1        rc_info.A.state                          button_state_t
+0x200009a5  0x1      * rc_info.A.flip                           button_flip_t
+0x200009a8  0x4        rc_info.A.update_time                    uint32_t
+0x200009ac  0x4        rc_info.A.hold_time                      uint32_t
+0x200009b0  0xc        rc_info.D                                button_t
+0x200009b0  0x1        rc_info.D.state                          button_state_t
+0x200009b1  0x1      * rc_info.D.flip                           button_flip_t
+0x200009b4  0x4        rc_info.D.update_time                    uint32_t
+0x200009b8  0x4        rc_info.D.hold_time                      uint32_t
+0x200009bc  0xc        rc_info.SHIFT                            button_t
+0x200009bc  0x1        rc_info.SHIFT.state                      button_state_t
+0x200009bd  0x1      * rc_info.SHIFT.flip                       button_flip_t
+0x200009c0  0x4        rc_info.SHIFT.update_time                uint32_t
+0x200009c4  0x4        rc_info.SHIFT.hold_time                  uint32_t
+0x200009c8  0xc        rc_info.CTRL                             button_t
+0x200009c8  0x1        rc_info.CTRL.state                       button_state_t
+0x200009c9  0x1      * rc_info.CTRL.flip                        button_flip_t
+0x200009cc  0x4        rc_info.CTRL.update_time                 uint32_t
+0x200009d0  0x4        rc_info.CTRL.hold_time                   uint32_t
+0x200009d4  0xc        rc_info.Q                                button_t
+0x200009d4  0x1        rc_info.Q.state                          button_state_t
+0x200009d5  0x1      * rc_info.Q.flip                           button_flip_t
+0x200009d8  0x4        rc_info.Q.update_time                    uint32_t
+0x200009dc  0x4        rc_info.Q.hold_time                      uint32_t
+0x200009e0  0xc        rc_info.E                                button_t
+0x200009e0  0x1        rc_info.E.state                          button_state_t
+0x200009e1  0x1      * rc_info.E.flip                           button_flip_t
+0x200009e4  0x4        rc_info.E.update_time                    uint32_t
+0x200009e8  0x4        rc_info.E.hold_time                      uint32_t
+0x200009ec  0xc        rc_info.R                                button_t
+0x200009ec  0x1        rc_info.R.state                          button_state_t
+0x200009ed  0x1      * rc_info.R.flip                           button_flip_t
+0x200009f0  0x4        rc_info.R.update_time                    uint32_t
+0x200009f4  0x4        rc_info.R.hold_time                      uint32_t
+0x200009f8  0xc        rc_info.F                                button_t
+0x200009f8  0x1        rc_info.F.state                          button_state_t
+0x200009f9  0x1      * rc_info.F.flip                           button_flip_t
+0x200009fc  0x4        rc_info.F.update_time                    uint32_t
+0x20000a00  0x4        rc_info.F.hold_time                      uint32_t
+0x20000a04  0xc        rc_info.G                                button_t
+0x20000a04  0x1        rc_info.G.state                          button_state_t
+0x20000a05  0x1      * rc_info.G.flip                           button_flip_t
+0x20000a08  0x4        rc_info.G.update_time                    uint32_t
+0x20000a0c  0x4        rc_info.G.hold_time                      uint32_t
+0x20000a10  0xc        rc_info.Z                                button_t
+0x20000a10  0x1        rc_info.Z.state                          button_state_t
+0x20000a11  0x1      * rc_info.Z.flip                           button_flip_t
+0x20000a14  0x4        rc_info.Z.update_time                    uint32_t
+0x20000a18  0x4        rc_info.Z.hold_time                      uint32_t
+0x20000a1c  0xc        rc_info.X                                button_t
+0x20000a1c  0x1        rc_info.X.state                          button_state_t
+0x20000a1d  0x1      * rc_info.X.flip                           button_flip_t
+0x20000a20  0x4        rc_info.X.update_time                    uint32_t
+0x20000a24  0x4        rc_info.X.hold_time                      uint32_t
+0x20000a28  0xc        rc_info.C                                button_t
+0x20000a28  0x1        rc_info.C.state                          button_state_t
+0x20000a29  0x1      * rc_info.C.flip                           button_flip_t
+0x20000a2c  0x4        rc_info.C.update_time                    uint32_t
+0x20000a30  0x4        rc_info.C.hold_time                      uint32_t
+0x20000a34  0xc        rc_info.V                                button_t
+0x20000a34  0x1        rc_info.V.state                          button_state_t
+0x20000a35  0x1      * rc_info.V.flip                           button_flip_t
+0x20000a38  0x4        rc_info.V.update_time                    uint32_t
+0x20000a3c  0x4        rc_info.V.hold_time                      uint32_t
+0x20000a40  0xc        rc_info.B                                button_t
+0x20000a40  0x1        rc_info.B.state                          button_state_t
+0x20000a41  0x1      * rc_info.B.flip                           button_flip_t
+0x20000a44  0x4        rc_info.B.update_time                    uint32_t
+0x20000a48  0x4        rc_info.B.hold_time                      uint32_t
+0x20000a4c  0xc        rc_info.MOUSE_L                          button_t
+0x20000a4c  0x1        rc_info.MOUSE_L.state                    button_state_t
+0x20000a4d  0x1      * rc_info.MOUSE_L.flip                     button_flip_t
+0x20000a50  0x4        rc_info.MOUSE_L.update_time              uint32_t
+0x20000a54  0x4        rc_info.MOUSE_L.hold_time                uint32_t
+0x20000a58  0xc        rc_info.MOUSE_R                          button_t
+0x20000a58  0x1        rc_info.MOUSE_R.state                    button_state_t
+0x20000a59  0x1      * rc_info.MOUSE_R.flip                     button_flip_t
+0x20000a5c  0x4        rc_info.MOUSE_R.update_time              uint32_t
+0x20000a60  0x4        rc_info.MOUSE_R.hold_time                uint32_t
+0x20000a64  0x2        rc_info.MOUSE_VX                         mouse_speed_t
+0x20000a64  0x2        rc_info.MOUSE_VX.val                     int16_t
+0x20000a66  0x2        rc_info.MOUSE_VY                         mouse_speed_t
+0x20000a66  0x2        rc_info.MOUSE_VY.val                     int16_t
+0x20000a68  0x2        rc_info.MOUSE_VZ                         mouse_speed_t
+0x20000a68  0x2        rc_info.MOUSE_VZ.val                     int16_t
+
+address     size       variable name                            type
+0x200004cc  0x4        chas_ctrl                                chassis_ctrl_t
+0x200004cc  0x4        chas_ctrl.motor                          pointer to array[4] of chassis_motor_pid_t
+
+address     size       variable name                            type
+0x200004b4  0x18       chas_dev                                 chassis_dev_t
+0x200004b4  0x10       chas_dev.chas_motor                      array[4] of pointer to chassis_motor_t
+0x200004c4  0x4        chas_dev.imu_sensor                      pointer to imu_sensor_t
+0x200004c8  0x4        chas_dev.rc_sensor                       pointer to rc_sensor_t
+
+address     size       variable name                            type
+0x20000938  0x10       chas_drv                                 array[4] of pointer to drv_can_t
+
+address     size       variable name                            type
+0x200002e0  0x2        chas_info                                chassis_info_t
+0x200002e0  0x1        chas_info.remote_mode                    remote_mode_t
+0x200002e1  0x1        chas_info.local_mode                     chassis_mode_t
+
+address     size       variable name                            type
+0x20000948  0x10       chas_motor                               array[4] of pointer to chassis_motor_t
+
+address     size       variable name                            type
+0x20000958  0x10       chas_motor_info                          array[4] of pointer to chassis_motor_info_t
+
+address     size       variable name                            type
+0x200002e4  0x1d0      chas_motor_pid                           array[4] of chassis_motor_pid_t
+
+address     size       variable name                            type
+0x200004d0  0x28       chassis                                  chassis_t
+0x200004d0  0x4        chassis.controller                       pointer to chassis_ctrl_t
+0x200004d4  0x4        chassis.dev                              pointer to chassis_dev_t
+0x200004d8  0x4        chassis.info                             pointer to chassis_info_t
+0x200004dc  0x1      * chassis.test_open                        _Bool
+0x200004e0  0x4        chassis.init                             pointer to function 
+0x200004e4  0x4        chassis.update                           pointer to function 
+0x200004e8  0x4        chassis.test                             pointer to function 
+0x200004ec  0x4        chassis.ctrl                             pointer to function 
+0x200004f0  0x4        chassis.output                           pointer to function 
+0x200004f4  0x4        chassis.self_protect                     pointer to function 
+
+address     size       variable name                            type
+0x200002c8  0x18       dev_list                                 dev_list_t
+0x200002c8  0x4        dev_list.rc_sen                          pointer to rc_sensor_t
+0x200002cc  0x4        dev_list.imu_sen                         pointer to imu_sensor_t
+0x200002d0  0x10       dev_list.chas_mtr                        array[4] of pointer to chassis_motor_t
+
+address     size       variable name                            type
+0x20000258  0x70       chassis_motor                            array[4] of chassis_motor_t
+
+address     size       variable name                            type
+0x20000138  0xd0       chassis_motor_driver                     array[4] of drv_can_t
+
+address     size       variable name                            type
+0x20000208  0x50       chassis_motor_info                       array[4] of chassis_motor_info_t
+
+address     size       variable name                            type
+0x2000011c  0x1c       imu_sensor                               imu_sensor_t
+0x2000011c  0x4        imu_sensor.info                          pointer to imu_sensor_info_t
+0x20000120  0x4        imu_sensor.driver                        pointer to drv_iic_t
+0x20000124  0x4        imu_sensor.init                          pointer to function 
+0x20000128  0x4        imu_sensor.update                        pointer to function 
+0x2000012c  0x4        imu_sensor.check                         pointer to function 
+0x20000130  0x4        imu_sensor.heart_beat                    pointer to function 
+0x20000134  0x1        imu_sensor.work_state                    dev_work_state_t
+0x20000135  0x1        imu_sensor.errno                         dev_errno_t
+0x20000136  0x1        imu_sensor.id                            dev_id_t
+
+address     size       variable name                            type
+0x200000f8  0x2        imu_sensor_driver                        drv_iic_t
+0x200000f8  0x1        imu_sensor_driver.type                   drv_type_t
+0x200000f9  0x1        imu_sensor_driver.id                     iic_id_t
+
+address     size       variable name                            type
+0x200000fc  0x20       imu_sensor_info                          imu_sensor_info_t
+0x200000fc  0x4        imu_sensor_info.yaw                      float
+0x20000100  0x4        imu_sensor_info.pitch                    float
+0x20000104  0x4        imu_sensor_info.roll                     float
+0x20000108  0x2        imu_sensor_info.rate_yaw                 short
+0x2000010a  0x2        imu_sensor_info.rate_pitch               short
+0x2000010c  0x2      * imu_sensor_info.rate_roll                short
+0x20000110  0x4        imu_sensor_info.rate_yaw_offset          float
+0x20000114  0x4        imu_sensor_info.rate_pitch_offset        float
+0x20000118  0x1        imu_sensor_info.offline_cnt              uint8_t
+0x20000119  0x1        imu_sensor_info.offline_max_cnt          uint8_t
+
+address     size       variable name                            type
+0x200000d4  0x24       rc_sensor                                rc_sensor_t
+0x200000d4  0x4        rc_sensor.info                           pointer to rc_sensor_info_t
+0x200000d8  0x4        rc_sensor.driver                         pointer to drv_uart_t
+0x200000dc  0x4        rc_sensor.init                           pointer to function 
+0x200000e0  0x4        rc_sensor.update                         pointer to function 
+0x200000e4  0x4        rc_sensor.check                          pointer to function 
+0x200000e8  0x4        rc_sensor.heart_beat                     pointer to function 
+0x200000ec  0x1        rc_sensor.work_state                     dev_work_state_t
+0x200000ed  0x1        rc_sensor.errno                          dev_errno_t
+0x200000ee  0x1      * rc_sensor.id                             dev_id_t
+0x200000f0  0x4        rc_sensor.if_channel_reset               pointer to function 
+0x200000f4  0x4        rc_sensor.reset                          pointer to function 
+
+address     size       variable name                            type
+0x00000000  0x1c       rc_sensor_driver                         drv_uart_t
+0x00000000  0x1        rc_sensor_driver.type                    drv_type_t
+0x00000001  0x1        rc_sensor_driver.id                      uart_id_t
+0x00000002  0x1      * rc_sensor_driver.errno                   drv_errno_t
+0x00000004  0x4        rc_sensor_driver.err_cnt                 uint32_t
+0x00000008  0x4        rc_sensor_driver.tx_buf                  pointer to uint8_t
+0x0000000c  0x1        rc_sensor_driver.tx_buf_len              uint8_t
+0x0000000d  0x1      * rc_sensor_driver.tx_data_cnt             uint8_t
+0x00000010  0x4        rc_sensor_driver.add_msg                 pointer to function 
+0x00000014  0x4        rc_sensor_driver.start_tx                pointer to function 
+0x00000018  0x4        rc_sensor_driver.start_tx_dma            pointer to function 
+
+address     size       variable name                            type
+0x200000ba  0x1a       rc_sensor_info                           rc_sensor_info_t
+0x200000ba  0x2        rc_sensor_info.ch0                       int16_t
+0x200000bc  0x2        rc_sensor_info.ch1                       int16_t
+0x200000be  0x2        rc_sensor_info.ch2                       int16_t
+0x200000c0  0x2        rc_sensor_info.ch3                       int16_t
+0x200000c2  0x1        rc_sensor_info.s1                        uint8_t
+0x200000c3  0x1        rc_sensor_info.s2                        uint8_t
+0x200000c4  0x2        rc_sensor_info.mouse_vx                  int16_t
+0x200000c6  0x2        rc_sensor_info.mouse_vy                  int16_t
+0x200000c8  0x2        rc_sensor_info.mouse_vz                  int16_t
+0x200000ca  0x1        rc_sensor_info.mouse_btn_l               uint8_t
+0x200000cb  0x1        rc_sensor_info.mouse_btn_r               uint8_t
+0x200000cc  0x2        rc_sensor_info.key_v                     uint16_t
+0x200000ce  0x2        rc_sensor_info.thumbwheel                int16_t
+0x200000d0  0x2        rc_sensor_info.offline_cnt               int16_t
+0x200000d2  0x2        rc_sensor_info.offline_max_cnt           int16_t
+
+address     size       variable name                            type
+0x0800bb2a  0x2000     bmi270_config_file                       array[8192] of const uint8_t
+
+address     size       variable name                            type
+0x0800db2a  0x30       bmi270_feat_in                           array[16] of const bmi2_feature_config
+
+address     size       variable name                            type
+0x0800db5a  0x15       bmi270_feat_out                          array[7] of const bmi2_feature_config
+
+address     size       variable name                            type
+0x200000b8  0x1        MPU_ADDR                                 uint8_t
+
+address     size       variable name                            type
+0x200000b9  0x1        dev_addr                                 uint8_t
+
+address     size       variable name                            type
+0x20000050  0x4        Ki                                       float
+
+address     size       variable name                            type
+0x2000004c  0x4        Kp                                       float
+
+address     size       variable name                            type
+0x20000090  0x4        ax                                       float
+
+address     size       variable name                            type
+0x20000094  0x4        ay                                       float
+
+address     size       variable name                            type
+0x20000098  0x4        az                                       float
+
+address     size       variable name                            type
+0x200008d0  0x68       bmi2_dev                                 bmi2_dev
+0x200008d0  0x1      * bmi2_dev.chip_id                         uint8_t
+0x200008d4  0x4        bmi2_dev.intf_ptr                        pointer to unknown Type 
+0x200008d8  0x1        bmi2_dev.info                            uint8_t
+0x200008d9  0x1        bmi2_dev.intf                            bmi2_intf
+0x200008da  0x1        bmi2_dev.intf_rslt                       int8_t
+0x200008db  0x1        bmi2_dev.dummy_byte                      uint8_t
+0x200008dc  0x1      * bmi2_dev.resolution                      uint8_t
+0x200008de  0x2        bmi2_dev.read_write_len                  uint16_t
+0x200008e0  0x4        bmi2_dev.config_file_ptr                 pointer to const uint8_t
+0x200008e4  0x1        bmi2_dev.page_max                        uint8_t
+0x200008e5  0x1        bmi2_dev.input_sens                      uint8_t
+0x200008e6  0x1        bmi2_dev.out_sens                        uint8_t
+0x200008e7  0x1        bmi2_dev.aux_man_en                      uint8_t
+0x200008e8  0x1      * bmi2_dev.aux_man_rd_burst_len            uint8_t
+0x200008ec  0x4        bmi2_dev.feat_config                     pointer to const bmi2_feature_config
+0x200008f0  0x4        bmi2_dev.feat_output                     pointer to const bmi2_feature_config
+0x200008f4  0x11       bmi2_dev.int_map                         bmi2_int_map
+0x200008f4  0x1        bmi2_dev.int_map.sig_mot_out_conf        uint8_t
+0x200008f5  0x1        bmi2_dev.int_map.any_mot_out_conf        uint8_t
+0x200008f6  0x1        bmi2_dev.int_map.no_mot_out_conf         uint8_t
+0x200008f7  0x1        bmi2_dev.int_map.step_det_out_conf       uint8_t
+0x200008f8  0x1        bmi2_dev.int_map.step_act_out_conf       uint8_t
+0x200008f9  0x1        bmi2_dev.int_map.tilt_out_conf           uint8_t
+0x200008fa  0x1        bmi2_dev.int_map.up_hold_to_wake_out_conf uint8_t
+0x200008fb  0x1        bmi2_dev.int_map.glance_out_conf         uint8_t
+0x200008fc  0x1        bmi2_dev.int_map.wake_up_out_conf        uint8_t
+0x200008fd  0x1        bmi2_dev.int_map.orient_out_conf         uint8_t
+0x200008fe  0x1        bmi2_dev.int_map.high_g_out_conf         uint8_t
+0x200008ff  0x1        bmi2_dev.int_map.low_g_out_conf          uint8_t
+0x20000900  0x1        bmi2_dev.int_map.flat_out_conf           uint8_t
+0x20000901  0x1        bmi2_dev.int_map.ext_sync_out_conf       uint8_t
+0x20000902  0x1        bmi2_dev.int_map.wrist_gest_out_conf     uint8_t
+0x20000903  0x1        bmi2_dev.int_map.wrist_wear_wake_up_out_conf uint8_t
+0x20000904  0x1        bmi2_dev.int_map.freefall_out_conf       uint8_t
+0x20000905  0x6        bmi2_dev.remap                           bmi2_axes_remap
+0x20000905  0x1        bmi2_dev.remap.x_axis                    uint8_t
+0x20000906  0x1        bmi2_dev.remap.y_axis                    uint8_t
+0x20000907  0x1        bmi2_dev.remap.z_axis                    uint8_t
+0x20000908  0x1        bmi2_dev.remap.x_axis_sign               uint8_t
+0x20000909  0x1        bmi2_dev.remap.y_axis_sign               uint8_t
+0x2000090a  0x1      * bmi2_dev.remap.z_axis_sign               uint8_t
+0x20000910  0x8        bmi2_dev.sens_en_stat                    uint64_t
+0x20000918  0x4        bmi2_dev.read                            bmi2_read_fptr_t
+0x2000091c  0x4        bmi2_dev.write                           bmi2_write_fptr_t
+0x20000920  0x4        bmi2_dev.delay_us                        bmi2_delay_fptr_t
+0x20000924  0x2        bmi2_dev.gyr_cross_sens_zx               int16_t
+0x20000926  0x1(7:1)   bmi2_dev.gyro_en                         uint8_t
+0x20000927  0x1        bmi2_dev.aps_status                      uint8_t
+0x20000928  0x2        bmi2_dev.variant_feature                 uint16_t
+0x2000092a  0x2        bmi2_dev.config_size                     uint16_t
+0x2000092c  0x4        bmi2_dev.get_wakeup_config               bmi2_wake_up_fptr_t
+0x20000930  0x4        bmi2_dev.set_wakeup_config               bmi2_wake_up_fptr_t
+
+address     size       variable name                            type
+0x00000000  0x1        debug_bmi                                int8_t
+
+address     size       variable name                            type
+0x20000078  0x4        ex                                       float
+
+address     size       variable name                            type
+0x2000009c  0x4        exInt                                    float
+
+address     size       variable name                            type
+0x2000007c  0x4        ey                                       float
+
+address     size       variable name                            type
+0x200000a0  0x4        eyInt                                    float
+
+address     size       variable name                            type
+0x20000080  0x4        ez                                       float
+
+address     size       variable name                            type
+0x200000a4  0x4        ezInt                                    float
+
+address     size       variable name                            type
+0x20000084  0x4        gx                                       float
+
+address     size       variable name                            type
+0x20000088  0x4        gy                                       float
+
+address     size       variable name                            type
+0x2000008c  0x4        gz                                       float
+
+address     size       variable name                            type
+0x20000054  0x4        halfT                                    float
+
+address     size       variable name                            type
+0x20000068  0x4        norm                                     float
+
+address     size       variable name                            type
+0x20000058  0x4        q0                                       float
+
+address     size       variable name                            type
+0x200000a8  0x4        q0temp                                   float
+
+address     size       variable name                            type
+0x2000005c  0x4        q1                                       float
+
+address     size       variable name                            type
+0x200000ac  0x4        q1temp                                   float
+
+address     size       variable name                            type
+0x20000060  0x4        q2                                       float
+
+address     size       variable name                            type
+0x200000b0  0x4        q2temp                                   float
+
+address     size       variable name                            type
+0x20000064  0x4        q3                                       float
+
+address     size       variable name                            type
+0x200000b4  0x4        q3temp                                   float
+
+address     size       variable name                            type
+0x00000000  0x10       sensor_data                              bmi2_sensor_data
+0x00000000  0x1      * sensor_data.type                         uint8_t
+0x00000004  0xc        sensor_data.sens_data                    bmi2_sens_data
+0x00000004  0xc        sensor_data.sens_data.acc                bmi2_sens_axes_data
+0x00000004  0x2        sensor_data.sens_data.acc.x              int16_t
+0x00000006  0x2        sensor_data.sens_data.acc.y              int16_t
+0x00000008  0x2      * sensor_data.sens_data.acc.z              int16_t
+0x0000000c  0x4        sensor_data.sens_data.acc.virt_sens_time uint32_t
+0x00000004  0xc        sensor_data.sens_data.gyr                bmi2_sens_axes_data
+0x00000004  0x2        sensor_data.sens_data.gyr.x              int16_t
+0x00000006  0x2        sensor_data.sens_data.gyr.y              int16_t
+0x00000008  0x2      * sensor_data.sens_data.gyr.z              int16_t
+0x0000000c  0x4        sensor_data.sens_data.gyr.virt_sens_time uint32_t
+0x00000004  0x8        sensor_data.sens_data.aux_data           array[8] of uint8_t
+0x00000004  0x4        sensor_data.sens_data.step_counter_output uint32_t
+0x00000004  0x1        sensor_data.sens_data.activity_output    uint8_t
+0x00000004  0x2        sensor_data.sens_data.orient_output      bmi2_orientation_output
+0x00000004  0x1        sensor_data.sens_data.orient_output.portrait_landscape uint8_t
+0x00000005  0x1        sensor_data.sens_data.orient_output.faceup_down uint8_t
+0x00000004  0x1        sensor_data.sens_data.high_g_output      uint8_t
+0x00000004  0x4        sensor_data.sens_data.gyro_user_gain_status bmi2_gyr_user_gain_status
+0x00000004  0x1        sensor_data.sens_data.gyro_user_gain_status.sat_x uint8_t
+0x00000005  0x1        sensor_data.sens_data.gyro_user_gain_status.sat_y uint8_t
+0x00000006  0x1        sensor_data.sens_data.gyro_user_gain_status.sat_z uint8_t
+0x00000007  0x1        sensor_data.sens_data.gyro_user_gain_status.g_trigger_status uint8_t
+0x00000004  0x5        sensor_data.sens_data.nvm_status         bmi2_nvm_err_status
+0x00000004  0x1        sensor_data.sens_data.nvm_status.load_error uint8_t
+0x00000005  0x1        sensor_data.sens_data.nvm_status.prog_error uint8_t
+0x00000006  0x1        sensor_data.sens_data.nvm_status.erase_error uint8_t
+0x00000007  0x1        sensor_data.sens_data.nvm_status.exceed_error uint8_t
+0x00000008  0x1        sensor_data.sens_data.nvm_status.privil_error uint8_t
+0x00000004  0x3        sensor_data.sens_data.vfrm_status        bmi2_vfrm_err_status
+0x00000004  0x1        sensor_data.sens_data.vfrm_status.lock_error uint8_t
+0x00000005  0x1        sensor_data.sens_data.vfrm_status.write_error uint8_t
+0x00000006  0x1        sensor_data.sens_data.vfrm_status.fatal_error uint8_t
+0x00000004  0x1        sensor_data.sens_data.wrist_gesture_output uint8_t
+0x00000004  0x2        sensor_data.sens_data.correction_factor_zx int16_t
+0x00000004  0x4        sensor_data.sens_data.accel_self_test_output bmi2_acc_self_test_status
+0x00000004  0x1        sensor_data.sens_data.accel_self_test_output.acc_self_test_done uint8_t
+0x00000005  0x1        sensor_data.sens_data.accel_self_test_output.acc_x_ok uint8_t
+0x00000006  0x1        sensor_data.sens_data.accel_self_test_output.acc_y_ok uint8_t
+0x00000007  0x1        sensor_data.sens_data.accel_self_test_output.acc_z_ok uint8_t
+0x00000004  0xc        sensor_data.sens_data.ois_output         bmi2_ois_output
+0x00000004  0x2        sensor_data.sens_data.ois_output.ois_acc_x int16_t
+0x00000006  0x2        sensor_data.sens_data.ois_output.ois_acc_y int16_t
+0x00000008  0x2        sensor_data.sens_data.ois_output.ois_acc_z int16_t
+0x0000000a  0x2        sensor_data.sens_data.ois_output.ois_gyro_x int16_t
+0x0000000c  0x2        sensor_data.sens_data.ois_output.ois_gyro_y int16_t
+0x0000000e  0x2        sensor_data.sens_data.ois_output.ois_gyro_z int16_t
+
+address     size       variable name                            type
+0x2000006c  0x4        vx                                       float
+
+address     size       variable name                            type
+0x20000070  0x4        vy                                       float
+
+address     size       variable name                            type
+0x20000074  0x4        vz                                       float
+
+address     size       variable name                            type
+0x20000048  0x4        HalTick                                  volatile uint32_t
+
+address     size       variable name                            type
+0x2000070c  0x64       usart1_dma_rxbuf                         array[100] of uint8_t
+
+address     size       variable name                            type
+0x20000770  0x30       usart2_dma_rxbuf                         array[2] of array[24] of uint8_t
+
+address     size       variable name                            type
+0x200007a0  0x64       usart4_dma_rxbuf                         array[100] of uint8_t
+
+address     size       variable name                            type
+0x20000804  0xc8       usart5_dma_rxbuf                         array[200] of uint8_t
+
+address     size       variable name                            type
+0x20000000  0x24       hcan1Mailbox                             CAN_MailboxTypeDef
+0x20000000  0x1      * hcan1Mailbox.errno                       CAN_MailboxErrnoTypeDef
+0x20000004  0x4        hcan1Mailbox.err_cnt                     uint32_t
+0x20000008  0x4        hcan1Mailbox.tx_port                     pointer to CAN_TxPortTypeDef
+0x2000000c  0x1      * hcan1Mailbox.tx_port_cnt                 uint8_t
+0x20000010  0x10       hcan1Mailbox.wait_tx_port_fifo           array[4] of pointer to CAN_TxPortTypeDef
+0x20000020  0x1        hcan1Mailbox.wait_tx_port_cnt            uint8_t
+0x20000021  0x1        hcan1Mailbox.auto_tx                     FunctionalState
+
+address     size       variable name                            type
+0x200006c4  0x24       hcan1RxFrame                             CAN_RxFrameTypeDef
+0x200006c4  0x1c       hcan1RxFrame.header                      CAN_RxHeaderTypeDef
+0x200006c4  0x4        hcan1RxFrame.header.StdId                uint32_t
+0x200006c8  0x4        hcan1RxFrame.header.ExtId                uint32_t
+0x200006cc  0x4        hcan1RxFrame.header.IDE                  uint32_t
+0x200006d0  0x4        hcan1RxFrame.header.RTR                  uint32_t
+0x200006d4  0x4        hcan1RxFrame.header.DLC                  uint32_t
+0x200006d8  0x4        hcan1RxFrame.header.Timestamp            uint32_t
+0x200006dc  0x4        hcan1RxFrame.header.FilterMatchIndex     uint32_t
+0x200006e0  0x8        hcan1RxFrame.data                        array[8] of uint8_t
+
+address     size       variable name                            type
+0x00000000  0x20       hcan1TxFrame                             CAN_TxFrameTypeDef
+0x00000000  0x18       hcan1TxFrame.header                      CAN_TxHeaderTypeDef
+0x00000000  0x4        hcan1TxFrame.header.StdId                uint32_t
+0x00000004  0x4        hcan1TxFrame.header.ExtId                uint32_t
+0x00000008  0x4        hcan1TxFrame.header.IDE                  uint32_t
+0x0000000c  0x4        hcan1TxFrame.header.RTR                  uint32_t
+0x00000010  0x4        hcan1TxFrame.header.DLC                  uint32_t
+0x00000014  0x1      * hcan1TxFrame.header.TransmitGlobalTime   FunctionalState
+0x00000018  0x8        hcan1TxFrame.data                        array[8] of uint8_t
+
+address     size       variable name                            type
+0x20000024  0x24       hcan2Mailbox                             CAN_MailboxTypeDef
+0x20000024  0x1      * hcan2Mailbox.errno                       CAN_MailboxErrnoTypeDef
+0x20000028  0x4        hcan2Mailbox.err_cnt                     uint32_t
+0x2000002c  0x4        hcan2Mailbox.tx_port                     pointer to CAN_TxPortTypeDef
+0x20000030  0x1      * hcan2Mailbox.tx_port_cnt                 uint8_t
+0x20000034  0x10       hcan2Mailbox.wait_tx_port_fifo           array[4] of pointer to CAN_TxPortTypeDef
+0x20000044  0x1        hcan2Mailbox.wait_tx_port_cnt            uint8_t
+0x20000045  0x1        hcan2Mailbox.auto_tx                     FunctionalState
+
+address     size       variable name                            type
+0x200006e8  0x24       hcan2RxFrame                             CAN_RxFrameTypeDef
+0x200006e8  0x1c       hcan2RxFrame.header                      CAN_RxHeaderTypeDef
+0x200006e8  0x4        hcan2RxFrame.header.StdId                uint32_t
+0x200006ec  0x4        hcan2RxFrame.header.ExtId                uint32_t
+0x200006f0  0x4        hcan2RxFrame.header.IDE                  uint32_t
+0x200006f4  0x4        hcan2RxFrame.header.RTR                  uint32_t
+0x200006f8  0x4        hcan2RxFrame.header.DLC                  uint32_t
+0x200006fc  0x4        hcan2RxFrame.header.Timestamp            uint32_t
+0x20000700  0x4        hcan2RxFrame.header.FilterMatchIndex     uint32_t
+0x20000704  0x8        hcan2RxFrame.data                        array[8] of uint8_t
+
+address     size       variable name                            type
+0x00000000  0x20       hcan2TxFrame                             CAN_TxFrameTypeDef
+0x00000000  0x18       hcan2TxFrame.header                      CAN_TxHeaderTypeDef
+0x00000000  0x4        hcan2TxFrame.header.StdId                uint32_t
+0x00000004  0x4        hcan2TxFrame.header.ExtId                uint32_t
+0x00000008  0x4        hcan2TxFrame.header.IDE                  uint32_t
+0x0000000c  0x4        hcan2TxFrame.header.RTR                  uint32_t
+0x00000010  0x4        hcan2TxFrame.header.DLC                  uint32_t
+0x00000014  0x1      * hcan2TxFrame.header.TransmitGlobalTime   FunctionalState
+0x00000018  0x8        hcan2TxFrame.data                        array[8] of uint8_t
+
