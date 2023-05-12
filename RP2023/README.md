@@ -5,6 +5,14 @@
 主要写了设备部分，理论上可以实现无痛开发
 
 > **`注意`** ：使用Cube重新生成后，需要用`./USER/CMSIS`目录**替换**`./Drives/CMSIS`目录
+>
+> 如果使用5.38a版本的keil5使用以下固件库
+>
+> ![image-20230512224801989](C:\Users\HXZP\AppData\Roaming\Typora\typora-user-images\image-20230512224801989.png)
+>
+> 使用以下编译器
+>
+> ![image-20230512230115789](C:\Users\HXZP\AppData\Roaming\Typora\typora-user-images\image-20230512230115789.png)
 
 ### 代码主要内容
 
@@ -25,6 +33,7 @@
 - 通信任务
 - 控制任务
   
+
 **`测试代码`** ：
  - 电机测试代码
    - 设置好电机信息:通信方式、id、电机类型
