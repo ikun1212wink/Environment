@@ -98,9 +98,9 @@ void vision_update(vision_t *vision_sen, uint8_t *rxBuf)
 				/* 数据正确则拷贝接收包 */
 				memcpy(vision_data->RxPacket.RxData.data, rxBuf, LEN_VISION_RX_PACKET);
 				vision_data->State.rx_data_update = true;	// 视觉数据更新	
-				{
-						memcpy((void*)(vision_data->RxPacket.RxData.jiesuan),vision_data->RxPacket.RxData.data+3,LEN_VISION_RX_PACKET-5);
-				}
+
+				memcpy((void*)(vision_data->RxPacket.RxData.jiesuan),vision_data->RxPacket.RxData.data+3,LEN_VISION_RX_PACKET-5);
+
 				/* 帧率计算 */
 				vision_data->State.rx_time_now  = xTaskGetTickCountFromISR();
 				vision_data->State.rx_time_fps  = vision_data->State.rx_time_now - vision_data->State.rx_time_prev;

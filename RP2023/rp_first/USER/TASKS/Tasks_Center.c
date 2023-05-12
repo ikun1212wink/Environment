@@ -89,7 +89,9 @@ void StartControlTask(void const * argument)
 
 		
 #if (RM_MOTOR_TEST == 1U)		
+		
 		RM_MotorControl_Test();
+		
 #endif		
 		
 		

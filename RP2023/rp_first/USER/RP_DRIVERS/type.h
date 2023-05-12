@@ -9,7 +9,7 @@
 
 #ifndef __stdint_h
 #define __stdint_h
-#define __ARMCLIB_VERSION 5060037
+//#define __ARMCLIB_VERSION 5060037
 
   #ifdef __INT64_TYPE__
     /* armclang predefines '__INT64_TYPE__' and '__INT64_C_SUFFIX__' */
