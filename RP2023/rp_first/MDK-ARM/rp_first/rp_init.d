@@ -45,8 +45,8 @@ rp_first\rp_init.o: ../USER/RP_DRIVERS/can_drv.h
 rp_first\rp_init.o: ../USER/RP_DRIVERS/uart_drv.h
 rp_first\rp_init.o: ../USER/RP_DEVICES/DEVICES.h
 rp_first\rp_init.o: ../USER/RP_DEVICES/led.h
-rp_first\rp_init.o: ../USER/RP_DEVICES/rc.h
 rp_first\rp_init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+rp_first\rp_init.o: ../USER/RP_DEVICES/rc.h
 rp_first\rp_init.o: ../USER/RP_DEVICES/cap.h
 rp_first\rp_init.o: ../USER/RP_DEVICES/imu.h
 rp_first\rp_init.o: ../USER/RP_DEVICES/RP_IMU/bmi270/BMI.h

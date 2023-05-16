@@ -106,10 +106,7 @@ int main(void)
   MX_IWDG_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
-	
-	if(imu.info.tpye == IMU_SPI)
-		MX_SPI2_Init();
-	
+
 	RP_INIT();
 		
   /* USER CODE END 2 */

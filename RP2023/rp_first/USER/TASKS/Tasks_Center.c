@@ -5,8 +5,9 @@
 */
 
 
-
+#include "stm32f4xx.h"
 #include "cmsis_os.h"
+
 #include "main.h"
 #include "arm_math.h"
 
@@ -14,6 +15,9 @@
 #include "RP_CONFIG.h"
 #include "DEVICES.h"
 #include "RP_FUNCTION.h"
+
+
+
 
 extern IWDG_HandleTypeDef hiwdg;
 
@@ -23,9 +27,8 @@ void StartMonitorTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {	
-		HAL_IWDG_Refresh(&hiwdg);
-	
-	  led.allShine(30);
+		
+	  led.running(50);
 		
 		rc.heart_beat(&rc);
 		
@@ -41,7 +44,7 @@ void StartMonitorTask(void const * argument)
 		
 		MASTER_HeartBeat();
 		
-#if RC_KEY_MONITOR == 1		
+#if (RC_KEY_MONITOR == 1)		
 		
 		rc.key(&rc);
 		
@@ -67,9 +70,11 @@ void StartCommunityTask(void const * argument)
 #if MASTER == 0U
 
 		/*等待imu数据收敛切换更低的kp用于控制使用*/
-		if(HAL_GetTick() > 1000)
-		imu.algo.KP = IMU_PID_KP_CONTROL;
+		if(HAL_GetTick() > 1000){
 		
+			imu.algo.KP = IMU_PID_KP_CONTROL;
+		}
+
 #endif		
 
     osDelay(1);
@@ -83,17 +88,38 @@ void StartCommunityTask(void const * argument)
 void StartControlTask(void const * argument)
 {
   /* USER CODE BEGIN StartControlTask */
+
   /* Infinite loop */
   for(;;)
   {
-
+		
+		HAL_IWDG_Refresh(&hiwdg);
 		
 #if (RM_MOTOR_TEST == 1U)		
 		
 		RM_MotorControl_Test();
 		
 #endif		
+
+#if (RM_MOTOR_TEST == 0U)		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+#endif		
 		
     osDelay(1);
   }
