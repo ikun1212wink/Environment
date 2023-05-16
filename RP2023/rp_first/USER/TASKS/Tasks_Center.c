@@ -97,6 +97,8 @@ void StartControlTask(void const * argument)
 		
 #if (RM_MOTOR_TEST == 1U)		
 		
+		magazine.modifyCCR(&magazine,127);
+		
 		RM_MotorControl_Test();
 		
 #endif		
