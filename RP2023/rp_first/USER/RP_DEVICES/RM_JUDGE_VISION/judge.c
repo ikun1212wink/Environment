@@ -213,6 +213,9 @@ void judge_sensor_update(judge_t *judge_sen, uint8_t *rxBuf)
 //						//JUDGE_ReadFromCom();
 //						break;
 				}
+				
+				// 接收到数据表示在线
+	      judge_sen->info.offline_cnt = 0;
 			}
 		}
 		
@@ -228,8 +231,7 @@ void judge_sensor_update(judge_t *judge_sen, uint8_t *rxBuf)
 	if(judge_data->data_valid != true)
 		judge_data->err_cnt++;
 	
-	// 接收到数据表示在线
-	judge_sen->info.offline_cnt = 0;
+
 	
 	
 }
