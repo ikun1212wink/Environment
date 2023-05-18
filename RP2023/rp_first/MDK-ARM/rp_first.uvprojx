@@ -1034,11 +1034,6 @@
               <FileType>1</FileType>
               <FilePath>..\USER\RP_DEVICES\servo.c</FilePath>
             </File>
-            <File>
-              <FileName>servo.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\USER\RP_DEVICES\servo.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

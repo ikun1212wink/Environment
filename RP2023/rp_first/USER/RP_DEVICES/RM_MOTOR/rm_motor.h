@@ -42,6 +42,7 @@ typedef struct motor_class_t
 	*/
 	float (*c_posit)(struct motor_class_t *motor,float target);
 	float (*c_angle)(struct motor_class_t *motor,float target);	
+	float (*c_step)(struct motor_class_t *motor,float target,char step);	
 	float (*c_speed)(struct motor_class_t *motor,float target);	
 	
 	/*
@@ -81,6 +82,7 @@ float motor_pid_ctrl(motor_pid_t *out, motor_pid_t *inn, float meas1, float meas
 
 float motor_pid_position(struct motor_class_t *motor,float target);
 float motor_pid_angle(struct motor_class_t *motor,float target);
+float motor_pid_step(struct motor_class_t *motor,float target,char step);
 float motor_pid_speed(struct motor_class_t *motor,float target);
 
 float motor_pid_double(motor_pid_t *out, motor_pid_t *inn, float meas1, float meas2, float tar, char err_cal_mode);

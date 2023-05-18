@@ -32,6 +32,7 @@
 
 	float (*c_posit)(struct motor_class_t *motor,float target);
 	float (*c_angle)(struct motor_class_t *motor,float target);	
+	float (*c_step)(struct motor_class_t *motor,float target,char step);
 	float (*c_speed)(struct motor_class_t *motor,float target);	
 	
 
@@ -113,11 +114,12 @@ motor_t motor[MOTOR_LIST] =
 	float  iout_max;
 	float  out_max;
 */
-float  test_speed_pid_param[7] = {5,0,0,0,0,15000,20000};
-//float yaw_imu_out_pid_param[7] = {200,0,0,0,0,15000,20000};
-//float yaw_imu_inn_pid_param[7] = {40,0.5,0,0,15000,20000,20000};
-//float pit_imu_out_pid_param[7] = {400,0,0,0,0,15000,20000};
-//float pit_imu_inn_pid_param[7] = {12,0.2,0,0,15000,20000,20000};
+float  test_speed_pid_param[7] = {5,0,0,0,0,15000,10000};
+float  test_posit_pid_param[7] = {1,0,0,0,0,15000,20000};
+float  test_posit_in_pid_param[7] = {2,0.1,0,0,0,5000,10000};
+
+float  test_angle_pid_param[7] = {20,0,0,0,0,15000,20000};
+float  test_angle_in_pid_param[7] = {10,1,50,0,0,8000,16000};
 
 float yaw_imu_out_pid_param[7] = {15,0,0,0,0,15000,20000};
 float yaw_imu_inn_pid_param[7] = {100,0.3,0,0,15000,20000,20000};
@@ -134,7 +136,12 @@ void RM_MotorInit(void)
 	/*电机速度pid初始化*/
 	
 	motor[MOTOR_TEST].pid_init(&motor[MOTOR_TEST].pid.speed,test_speed_pid_param);
+	motor[MOTOR_TEST].pid_init(&motor[MOTOR_TEST].pid.position,test_posit_pid_param);
+	motor[MOTOR_TEST].pid_init(&motor[MOTOR_TEST].pid.position_in,test_posit_in_pid_param);
 
+	motor[MOTOR_TEST].pid_init(&motor[MOTOR_TEST].pid.step,test_angle_pid_param);
+	motor[MOTOR_TEST].pid_init(&motor[MOTOR_TEST].pid.step_in,test_angle_in_pid_param);	
+	
 	motor[GIMB_Y].pid_init(&motor[GIMB_Y].pid.angle,   yaw_imu_out_pid_param);
 	motor[GIMB_Y].pid_init(&motor[GIMB_Y].pid.angle_in,yaw_imu_inn_pid_param);	
 	
@@ -151,9 +158,12 @@ int16_t SendBuffTest[4];
 
 void RM_MotorControl_Test(void)
 {
-		//pid计算
-		SendBuffTest[motor[MOTOR_TEST].id.buff_p] = motor[MOTOR_TEST].c_speed(&motor[MOTOR_TEST],targetTest);
+  	SendBuffTest[motor[MOTOR_TEST].id.buff_p] = motor[MOTOR_TEST].c_step(&motor[MOTOR_TEST],0,3);
 
+	
+//	  SendBuffTest[motor[MOTOR_TEST].id.buff_p] = motor[MOTOR_TEST].c_posit(&motor[MOTOR_TEST],8192*14);
+	
+//		SendBuffTest[motor[MOTOR_TEST].id.buff_p] = motor[MOTOR_TEST].c_speed(&motor[MOTOR_TEST],targetTest);
 	  //控制数据的发送
 		motor[MOTOR_TEST].tx(&motor[MOTOR_TEST],SendBuffTest);
 	

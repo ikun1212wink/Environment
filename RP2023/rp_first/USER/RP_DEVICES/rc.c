@@ -35,7 +35,7 @@ rc_t rc = {
 	.info.tw_step_value[3] = -300,	
 	
 	.info.state = RC_OFFLINE,
-	.info.offline_cnt     = 0,
+	.info.offline_cnt     = 100,
 	.info.offline_max_cnt = 100,
 };
 

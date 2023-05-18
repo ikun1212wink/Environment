@@ -85,6 +85,7 @@ power为主控电源位置，按下图摆放找坐标系
 	#define IMU_POTOCAL_TYPE IMU_SPI
 	
 #endif
+
 #if MASTER == 1U
 	#define IMU_POSE_ANGLE 180
 	#define IMU_POSE_AX    1
@@ -110,8 +111,8 @@ power为主控电源位置，按下图摆放找坐标系
 
 #define RM_MOTOR_TEST            1U //Enable Motor Test
 #define RM_MOTOR_CAN_TYPR_TEST   1U //1 CAN1 2 CAN2
-#define RM_MOTOR_CAN_ID_TEST     0x205U //id
-#define RM_MOTOR_TYPE_TEST       1U //1 6020 2 3508 3 2006
+#define RM_MOTOR_CAN_ID_TEST     0x201U //id
+#define RM_MOTOR_TYPE_TEST       2U //1 6020 2 3508 3 2006
 
 
 #define RC_KEY_MONITOR       1U 
