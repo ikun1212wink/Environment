@@ -56,7 +56,7 @@ void StartMonitorTask(void const * argument)
 }
 
 
-
+uint32_t maccr;
 void StartCommunityTask(void const * argument)
 {
   /* USER CODE BEGIN StartImuTask */
@@ -69,11 +69,7 @@ void StartCommunityTask(void const * argument)
 		
 #if MASTER == 0U
 
-		/*等待imu数据收敛切换更低的kp用于控制使用*/
-		if(HAL_GetTick() > 1000){
-		
-			imu.algo.KP = IMU_PID_KP_CONTROL;
-		}
+    magazine.modifyCCR(&magazine,maccr);
 
 #endif		
 

@@ -118,8 +118,8 @@ float  test_speed_pid_param[7] = {5,0,0,0,0,15000,10000};
 float  test_posit_pid_param[7] = {1,0,0,0,0,15000,20000};
 float  test_posit_in_pid_param[7] = {2,0.1,0,0,0,5000,10000};
 
-float  test_angle_pid_param[7] = {20,0,0,0,0,15000,20000};
-float  test_angle_in_pid_param[7] = {10,1,50,0,0,8000,16000};
+float  test_angle_pid_param[7] = {1,0,0,0,0,15000,20000};
+float  test_angle_in_pid_param[7] = {10,0,0,0,0,8000,16000};
 
 float yaw_imu_out_pid_param[7] = {15,0,0,0,0,15000,20000};
 float yaw_imu_inn_pid_param[7] = {100,0.3,0,0,15000,20000,20000};
@@ -153,17 +153,19 @@ void RM_MotorInit(void)
 /*
 	电机测试代码
 */
-float targetTest = 300;
+float targetTest = 1000;
 int16_t SendBuffTest[4];
 
 void RM_MotorControl_Test(void)
 {
-  	SendBuffTest[motor[MOTOR_TEST].id.buff_p] = motor[MOTOR_TEST].c_step(&motor[MOTOR_TEST],0,3);
+	
+		
+//  	SendBuffTest[motor[MOTOR_TEST].id.buff_p] = motor[MOTOR_TEST].c_step(&motor[MOTOR_TEST],0,0);
 
 	
 //	  SendBuffTest[motor[MOTOR_TEST].id.buff_p] = motor[MOTOR_TEST].c_posit(&motor[MOTOR_TEST],8192*14);
 	
-//		SendBuffTest[motor[MOTOR_TEST].id.buff_p] = motor[MOTOR_TEST].c_speed(&motor[MOTOR_TEST],targetTest);
+		SendBuffTest[motor[MOTOR_TEST].id.buff_p] = motor[MOTOR_TEST].c_speed(&motor[MOTOR_TEST],targetTest);
 	  //控制数据的发送
 		motor[MOTOR_TEST].tx(&motor[MOTOR_TEST],SendBuffTest);
 	
